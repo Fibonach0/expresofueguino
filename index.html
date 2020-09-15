@@ -512,7 +512,7 @@
                     <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
                     <div class="row">
                         <div class="col-sm-12 form-group">
-                            <input class="btn btn-default pull-right" type="button" value="Send Email" onclick="sendEmail()" required>
+                            <input class="btn btn-default pull-right" type="button" value="Enviar" onclick="sendEmail()" required>
                         </div>
                     </div>
                 </div>
@@ -547,11 +547,11 @@
                     Password: "Yeah!1561219497",
                     To: 'rhefew@gmail.com',
                     From: "IGnacio.antu@gmail.com",
-                    Subject: "SUBJECT",
-                    Body: "BODY",
+                    Subject: "name",
+                    Body: "comments",
                 })
                 .then(function(message) {
-                    alert("mail sent successfully")
+                    alert("El mail se envió correctamente.")
                 });
         }
     </script>
