@@ -1,662 +1,575 @@
 <!DOCTYPE html>
-<html>
-<title>Expreso Fueguino</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<!-- PRueba-->
-<style>
-    body {
-        background-image: url("https://www.scania.com/content/scanianoe/group/en/home/products-and-services/trucks/r-series/_jcr_content/image.img.jpg/1586960839830.jpg");
-        background-repeat: no-repeat;
-        background-color: #cccccc;
-        background-size: cover;
-    }
-    
-    p {
-        color: #ffffff;
-        font-family: Charcoal, sans-serif;
-        letter-spacing: 3px;
-    }
-    
-    h3 {
-        color: #ffffff;
-        letter-spacing: 3px;
-        text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    }
-</style>
+<html lang="en">
+<!-- Fibonacci/ikifaR -->
+<head>
+    <!-- Tema sacado de www.w3schools.com -->
+    <title>Expreso Fueguino</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .jumbotron {
+            background-color: #182bdb;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo-small {
+            color: #182bdb;
+            font-size: 50px;
+        }
+        
+        .logo {
+            color: #182bdb;
+            font-size: 200px;
+        }
+        
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #182bdb;
+        }
+        
+        .carousel-indicators li {
+            border-color: #182bdb;
+        }
+        
+        .carousel-indicators li.active {
+            background-color: #182bdb;
+        }
+        
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        
+        .item span {
+            font-style: normal;
+        }
+        
+        .panel {
+            border: 1px solid #182bdb;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+        
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .panel-footer .btn:hover {
+            border: 1px solid #182bdb;
+            background-color: #fff !important;
+            color: #182bdb;
+        }
+        
+        .panel-heading {
+            color: #fff !important;
+            background-color: #182bdb !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .panel-footer {
+            background-color: white !important;
+        }
+        
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #182bdb;
+            color: #fff;
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            background-color: #182bdb;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #182bdb !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #182bdb;
+        }
+        
+        .slideanim {
+            visibility: hidden;
+        }
+        
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-    <!-- Side Navigation -->
-    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-        <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
-        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-        <a href="#" class="w3-bar-item w3-button">Link A</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        <a href="#" class="w3-bar-item w3-button">Link 4</a>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <!--Logo-->
+                <a class="navbar-brand" href="#myPage"><img src="favicon-32x32.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">NOSOTROS</a></li>
+                    <li><a href="#services">SERVICIOS</a></li>
+                    <li><a href="#portfolio">TRABAJOS</a></li>
+                    <li><a href="#pricing">ECOMERCE</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Header -->
-    <background href="https://www.scania.com/content/scanianoe/group/en/home/products-and-services/trucks/r-series/_jcr_content/image.img.jpg/1586960839830.jpg">
-        <header class="w3-container id=" myHeader ">
-            <i onclick="w3_open() " class="fa fa-bars w3-xlarge w3-button w3-theme "></i>
-            <div class="w3-center " >
-                <h4></h4>
-                <h1 class="w3-xxxlarge w3-animate-bottom ">Expreso Fueguino</h1>
-                <div class="w3-padding-32 ">
-                    <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey " onclick="document.getElementById( 'id01').style.display='block' " style="font-weight:900; ">Nuestra Historia.</button>
+    <div class="jumbotron text-center">
+        <h1>Expreso Fueguino</h1>
+        <p>Nos especializamos en transporte de cargas</p>
+        <!--
+        <form>
+            <div class="input-group">
+                <input type="email" class="form-control" size="50" placeholder="Cuenta de correo" required>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-danger">Suscribirse</button>
                 </div>
             </div>
-        </header>
-
-        <!-- Modal -->
-        <div id="id01 " class="w3-modal ">
-            <div class="w3-modal-content w3-card-4 w3-animate-top ">
-                <header class="w3-container w3-theme-l1 ">
-                    <span onclick="document.getElementById( 'id01').style.display='none' " class="w3-button w3-display-topright ">×</span>
-                    <h4>Un título para Lo que viene</h4>
-                    <h5><i class="fa fa-smile-o "></i></h5>
-                </header>
-                <div class="w3-padding ">
-                    <p>Acá se puede poner la historia de Expreso Fueguino</p>
-                    <!-- Para agregar un link <p><a class="w3-btn " href=" ">  </a>  </p> -->
-                </div>
-                <footer class="w3-container w3-theme-l1 ">
-                    <p>Un Pié de página (Si se quiere)</p>
-                </footer>
-            </div>
-        </div>
-
-        <div class="w3-row-padding w3-center w3-margin-top ">
-            <div class="w3-third ">
-                <div class="w3-card w3-container " style="min-height:400px ">
-                    <h3>Un título</h3><br>
-                    <i class="fa fa-desktop w3-margin-bottom w3-text-theme " style="font-size:120px "></i>
-                    <p> La idea es que</p>
-                    <p> esto sea multiplataforma</p>
-                    <p> (que se vea bien en: </p>
-                    <p> PC, celular, tablet... )</p>
-                </div>
-            </div>
-
-            <div class="w3-third ">
-                <div class="w3-card w3-container " style="min-height:400px ">
-                    <h3>Instagram</h3><br>
-                    <picture>
-                        <a href="http://www.instagram.com " target=" _blank "><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/198px-Instagram_logo_2016.svg.png " width="100px " height="100px "></a>
-                    </picture>
-                    <a href="http://www.instagram.com " target=" _blank ">
-                        <p>Instagram a hacer</p>
-                    </a>
-                    <p> Se me ocurre subir fotos </p>
-                    <p> que pueden pasarnos los choferes</p>
-                    <p> de los viajes al sur o al norte</p>
-                </div>
-            </div>
-
-            <div class="w3-third ">
-                <div class="w3-card w3-container " style="min-height:400px ">
-                    <h3>Ecomerce</h3><br>
-                    <a href="http://www.ecargas.com.ar/ " target=" _blank ">
-                    <picture><img src="http://www.ecargas.com.ar/assets/img/ipad-hand.png " width="100px " height="100px " border-image=0></picture>
-                    </a>
-                    <a href="http://www.ecargas.com.ar/ " target=" _blank ">
-                        <p>Para verificar las cargas.</p>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-                                                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13129.24279489946!2d-58.39549256858493!3d-34.646855587171366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb44f3f9a993%3A0xe825704ccee6f5db!2sExpreso%20Fueguino!5e0!3m2!1ses!2sar!4v1599934524224!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                                                           
-                                                                           
-<!--
-        <div class="w3-container ">
-            <hr>
-            <div class="w3-center ">
-                <h2>Color Classes</h2>
-            </div>
-
-            <div class="w3-row ">
-                <div class="w3-col w3-container m2 w3-red ">
-                    <p>Red</p>
-                </div>
-                <div class="w3-col w3-container m2 w3-blue ">
-                    <p>Blue</p>
-                </div>
-                <div class="w3-col w3-container m2 w3-blue-grey ">
-                    <p>Blue Grey</p>
-                </div>
-                <div class="w3-col w3-container m2 w3-teal ">
-                    <p>Teal</p>
-                </div>
-                <div class="w3-col w3-container m2 w3-yellow ">
-                    <p>Yellow</p>
-                </div>
-                <div class="w3-col w3-container m2 w3-orange ">
-                    <p>Orange</p>
-                </div>
-            </div>
-            
-<hr>
-<div class="w3-center ">
-  <h2>Built-In Responsiveness</h2>
-  <p class="w3-large ">Resize the page to see the effect!</p>
-</div>
-<br>
-
-<div class="w3-row w3-border ">
-  <div class="w3-half w3-container w3-blue w3-border ">
-    <h5>w3-half</h5>  
-    <p>The w3-half class uses half (50%) of the screen window.</p>
-    <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
-  </div>
-  <div class="w3-half w3-container ">
-    <h5>w3-half</h5>  
-  </div>
-</div>
-<br>
-
-<div class="w3-row w3-border ">
-  <div class="w3-third w3-container w3-green ">
-    <h5>w3-third</h5>  
-    <p>The w3-third class uses one third (33.33%) of the screen widow.</p>
-    <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
-  </div>
-  <div class="w3-third w3-container ">
-    <h5>w3-third</h5>  
-  </div>
-  <div class="w3-third w3-container ">
-    <h5>w3-third</h5>  
-  </div>
-</div>
-<br>
-
-<div class="w3-row w3-border ">
-  <div class="w3-quarter w3-container w3-red ">
-    <h5>w3-quarter</h5>  
-    <p>The w3-quarter class uses one quarter (25%) of the screen window.</p>
-    <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
-  </div>
-  <div class="w3-quarter w3-container ">
-    <h5>w3-quarter</h5>  
-  </div>
-  <div class="w3-quarter w3-container ">
-    <h5>w3-quarter</h5>  
-  </div>
-  <div class="w3-quarter w3-container ">
-    <h5>w3-quarter</h5>  
-  </div>
-</div> 
-     
-<div class="w3-center ">
-  <h2>Containers</h2>
-  <p>Use containers to create headers, sections and footers.</p>
-</div>   
-
-<header class="w3-container w3-blue-grey ">
-  <h2>Header</h2>
-</header>
-
-<div class="w3-padding w3-white w3-display-container ">
-  <span onclick="this.parentElement.style.display='none' " class="w3-button w3-display-topright "><i class="fa fa-remove "></i></span>
-  <h2>London</h2>
-  <p>London is the capital city of England. It is the most populous city in the United Kingdom,
-  with a metropolitan area of over 13 million inhabitants.</p>
-  <p>Standing on the River Thames, London has been a major settlement for two millennia,
-  its history going back to its founding by the Romans, who named it Londinium.</p>
-  <p>By the way, you can add a close icon to all containers if you want the ability to hide them. Look to your right!</p>
-</div>
-
-<footer class="w3-container w3-blue-grey ">
-  <h5>Footer</h5>
-  <p class="w3-opacity ">Footer information goes here</p>
-</footer>
-
-<hr>
-<div class="w3-center ">
-  <h2>Color Themes</h2>
-  <p>The color themes have been designed to work harmoniously with each other.</p>
-</div>
-</div>
-
-<div class="w3-row-padding ">
-
-<div class="w3-half ">
-<div class="w3-card white ">
-  <div class="w3-container w3-indigo ">
-    <h3>Theme Indigo</h3>
-  </div>
-  <div class="w3-container ">
-  <h3 class="w3-text-indigo ">Movies 2014</h3>
-  </div>
-  <ul class="w3-ul w3-border-top ">
-    <li>
-      <h3>Frozen</h3>
-      <p>The response to the animations was ridiculous</p>
-    </li>
-    <li>
-      <h3>The Fault in Our Stars</h3>
-      <p>Touching, gripping and genuinely well made</p>
-    </li>
-    <li>
-      <h3>The Avengers</h3>
-      <p>A huge success for Marvel and Disney</p>
-    </li>
-  </ul>
-  <div class="w3-container w3-indigo w3-large "><span class="w3-right ">Next</span></div>
-</div>
-</div>
-
-<div class="w3-half ">
-<div class="w3-card white ">
-  <div class="w3-container w3-theme ">
-    <h3>Theme</h3>
-  </div>
-  <div class="w3-container ">
-  <h3 class="w3-text-theme ">Movies 2014</h3>
-  </div>
-  <ul class="w3-ul w3-border-top ">
-    <li>
-      <h3>Frozen</h3>
-      <p>The response to the animations was ridiculous</p>
-    </li>
-    <li>
-      <h3>The Fault in Our Stars</h3>
-      <p>Touching, gripping and genuinely well made</p>
-    </li>
-    <li>
-      <h3>The Avengers</h3>
-      <p>A huge success for Marvel and Disney</p>
-    </li>
-  </ul>
-  <div class="w3-container w3-theme w3-large "><span class="w3-right ">Next</span></div>
-</div>
-</div>
-</div>
-
-<div class="w3-container w3-center ">
-  <hr>
-  <h3>Paper-like Cards with Shadows</h3>
-</div>
-
-<div class="w3-row-padding "> 
-
-<div class="w3-third ">
-<div class="w3-card ">
-  <img src="/w3images/car.jpg " alt="Car " style="width:100% ">
-  <div class="w3-container ">
-  <p>w3-card</p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third ">
-<div class="w3-card-4 ">
-  <img src="/w3images/car.jpg " alt="Car " style="width:100% ">
-  <div class="w3-container ">
-  <p>w3-card-4</p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third ">
-<div class="w3-card-4 ">
-  <img src="/w3images/car.jpg " alt="Car " style="width:100% ">
-  <div class="w3-container ">
-  <p>w3-card-4</p>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="w3-container ">
-  <hr>
-  <div class="w3-center ">
-    <h2>Tables</h2>
-    <p w3-class="w3-large ">Don't worry. W3.CSS takes care of your tables.</p>
-  </div>
-<div class="w3-responsive w3-card-4 ">
-<table class="w3-table w3-striped w3-bordered ">
-<thead>
-<tr class="w3-theme ">
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Points</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Jill</td>
-  <td>Smith</td>
-  <td>50</td>
-</tr>
-<tr class="w3-white ">
-  <td>Eve</td>
-  <td>Jackson</td>
-  <td>94</td>
-</tr>
-<tr>
-  <td>Adam</td>
-  <td>Johnson</td>
-  <td>67</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<hr>
-<h2 class="w3-center ">Forms and Lists</h2>
-</div>
-
-<div class="w3-row-padding ">
-
-<div class="w3-half ">
-<form class="w3-container w3-card-4 ">
-  <h2>Input Form</h2>
-  <div class="w3-section ">      
-    <input class="w3-input " type="text " required>
-    <label>Name</label>
-  </div>
-  <div class="w3-section ">      
-    <input class="w3-input " type="text " required>
-    <label>Email</label>
-  </div>
-  <div class="w3-section ">      
-    <input class="w3-input " type="text " required>
-    <label>Subject</label>
-  </div>
-
-  <div class="w3-row ">
-  <div class="w3-half ">
-    <input id="milk " class="w3-check " type="checkbox " checked="checked ">
-    <label>Milk</label>
-    <br>
-    <input id="sugar " class="w3-check " type="checkbox ">
-    <label>Sugar</label>
-    <br>
-    <input id="lemon " class="w3-check " type="checkbox " disabled>
-    <label>Lemon (Disabled)</label>
-    <br><br>
-  </div>
-
-  <div class="w3-half ">
-    <input id="male " class="w3-radio " type="radio " name="gender " value="male " checked>
-    <label>Male</label>
-    <br>
-    <input id="female " class="w3-radio " type="radio " name="gender " value="female ">
-    <label>Female</label>
-    <br>
-    <input id="unknown " class="w3-radio " type="radio " name="gender " value=" " disabled>
-    <label> Don't know (Disabled)</label>
-  </div>
-  </div>
-</form>
-</div>
-<div class="w3-half ">
-<div class="w3-card-4 w3-container ">
-<h2>Lists</h2>
-<ul class="w3-ul w3-margin-bottom ">
-  <li>Jill</li>
-  <li>Eve</li>
-  <li>Adam</li>
-</ul>
-<br>
-<ul class="w3-ul w3-border w3-hoverable ">
-  <li class="w3-theme ">Jill</li>
-  <li>Eve</li>
-  <li>Adam</li>
-  <li>Steve</li>
-</ul>
-<br>
-</div>
-</div>
-</div>
-<hr>
-
-<h2 class="w3-center ">Progress Bars</h2>
-<div class="w3-container ">
-
-<div class="w3-light-gray ">
-  <div id="myBar " class="w3-center w3-padding w3-theme " style="width:5% ">5%</div>
-</div><br>
-<button class="w3-btn w3-theme " onclick="move() ">Click Me</button> 
-</div>
-<hr>
-
-<h2 class="w3-center ">Slideshows</h2>
-<div class="w3-content " style="max-width:800px;position:relative ">
-
-<img class="mySlides w3-animate-opacity " src="/w3images/snow.jpg " style="width:100% ">
-<img class="mySlides w3-animate-opacity " src="/w3images/lights.jpg " style="width:100% ">
-<img class="mySlides w3-animate-opacity " src="/w3images/mountains.jpg " style="width:100% ">
-<img class="mySlides w3-animate-opacity " src="/w3images/forest.jpg " style="width:100% ">
-
-<a class="w3-button w3-hover-dark-grey " style="position:absolute;top:45%;left:0; " onclick="plusDivs(-1) ">❮</a>
-<a class="w3-button w3-hover-dark-grey " style="position:absolute;top:45%;right:0; " onclick="plusDivs(+1) ">❯</a>
-</div>
-
-<div class="w3-container ">
-<hr>
-<h2 class="w3-center ">Navigation</h2>
-
-<div class="w3-bar w3-theme ">
-  <a href="# " class="w3-bar-item w3-button w3-padding-16 ">Home</a>
-  <a href="# " class="w3-bar-item w3-button w3-padding-16 ">Link 1</a>
-  <div class="w3-dropdown-hover ">
-    <button class="w3-button w3-padding-16 ">
-      Dropdown <i class="fa fa-caret-down "></i>
-    </button>
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block ">
-      <a href="javascript:void(0) " class="w3-bar-item w3-button ">Link 1</a>
-      <a href="javascript:void(0) " class="w3-bar-item w3-button ">Link 2</a>
-      <a href="javascript:void(0) " class="w3-bar-item w3-button ">Link 3</a>
+        </form>
+    -->
     </div>
-  </div>
-</div>
-  
-<hr>
-<h2 class="w3-center ">Accordions</h2>
-<button onclick="myAccFunc( 'Demo1') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Open Section 1</button>
-<div id="Demo1 " class="w3-hide ">
-  <div class="w3-container ">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-<button onclick="myAccFunc( 'Demo2') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Open Section 2</button>
-<div id="Demo2 " class="w3-hide ">
-  <a href="# " class="w3-button w3-block w3-left-align ">Link 1</a>
-  <a href="# " class="w3-button w3-block w3-left-align ">Link 2</a>
-  <a href="# " class="w3-button w3-block w3-left-align ">Link 3</a>
-</div>
-<button onclick="myAccFunc( 'Demo3') " class="w3-padding-16 w3-theme w3-button w3-block w3-left-align ">Open Section 3</button>
-<div id="Demo3 " class="w3-hide w3-black ">
-  <div class="w3-container ">
-    <p>Accordion with Images:</p>
-    <img src="img_snowtops.jpg " style="width:30%; " class="w3-animate-zoom ">
-    <p>French Alps</p>
-  </div>
-</div>
 
-<hr>
-<h2 class="w3-center ">Tabs</h2>
-<div class="w3-border ">
-<div class="w3-bar w3-theme ">
-  <button class="w3-bar-item w3-button testbtn w3-padding-16 " onclick="openCity(event, 'London') ">London</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16 " onclick="openCity(event, 'Paris') ">Paris</button>
-  <button class="w3-bar-item w3-button testbtn w3-padding-16 " onclick="openCity(event, 'Tokyo') ">Tokyo</button>
-</div>
-
-<div id="London " class="w3-container city w3-animate-opacity ">
-  <h2>London</h2>
-  <p>London is the capital city of England.</p>
-  <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-</div>
-
-<div id="Paris " class="w3-container city w3-animate-opacity ">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p> 
-  <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-</div>
-
-<div id="Tokyo " class="w3-container city w3-animate-opacity ">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
-  <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-</div>
-</div>
-
-<hr>
-<h2 class="w3-center ">Buttons</h2>
-<div class="w3-center ">
-  <br>
-  <a class="w3-button w3-theme ">Button</a>
-  <a class="w3-button w3-theme ">Button</a>
-  <a class="w3-button w3-theme-d3 w3-disabled ">Button</a>
-  <br><br>
-  <a class="w3-button w3-circle w3-large w3-black "><i class="fa fa-plus "></i></a>
-  <a class="w3-button w3-circle w3-large w3-theme "><i class="fa fa-plus "></i></a>  
-  <a class="w3-button w3-circle w3-large w3-card-4 "><i class="fa fa-plus "></i></a>
-</div>
-<br>
-<div class="w3-center ">
-  <div class="w3-dropdown-hover ">
-    <button class="w3-button w3-theme ">Dropdown <i class="fa fa-caret-down "></i></button>
-    <div class="w3-dropdown-content w3-bar-block w3-border ">
-      <a href="# " class="w3-bar-item w3-button ">Link 1</a>
-      <a href="# " class="w3-bar-item w3-button ">Link 2</a>
-      <a href="# " class="w3-bar-item w3-button ">Link 3</a>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<hr>
-<div class="w3-center ">
-  <h2>Pagination</h2>
-
-
-            // < !-- Pagination -- >
-            <div class="w3-center w3-padding-32 ">
-                <div class="w3-bar ">
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">«</a>
-                    <a href="# " class="w3-bar-item w3-button w3-theme w3-hover-theme ">1</a>
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">2</a>
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">3</a>
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">4</a>
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">5</a>
-                    <a href="# " class="w3-bar-item w3-button w3-hover-theme ">»</a>
-                </div>
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Sobre nosotros.</h2><br>
+                <h4>Somos una empresa blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah .</h4><br>
+                <p>Y además blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah .</p>
+                <!-- <br><button class="btn btn-default btn-lg">Get in Touch</button> -->
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
             </div>
         </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo slideanim"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>NUESTROS VALORES</h2><br>
+                <h4><strong>NUESTRA MISION:</strong> Nuestra mision blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah </h4><br>
+                <p><strong>NUESTRA VISION:</strong> Nuestra Vision blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah } blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h2>SERVICIOS</h2>
+        <h4>Qué ofrecemos.</h4>
         <br>
-      -->
-            <!-- Footer -->
-            <footer class="w3-container w3-padding-16 ">
-                <h3>Footer</h3>
-                <p>
-                    <a href="https://www.w3schools.com/w3css/default.asp " target="_blank "> </a>
-                </p>
-                <div style="position:relative;bottom:55px; " class="w3-tooltip w3-right ">
-                    <span class="w3-text w3-theme-light w3-padding ">Volver arriba!</span>
-                    <a class="w3-text-white " href="#myHeader "><span class="w3-xlarge ">
-    <i class="fa fa-chevron-circle-up "></i></span></a>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span style="color:rgb(0, 0, 0)" class="glyphicon glyphicon-off logo-small"></span>
+                <h4>Fuerza</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span style="color:rgb(228, 10, 10)" class="glyphicon glyphicon-heart logo-small"></span>
+                <h4>Empatía</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-lock logo-small"></span>
+                <h4>Trabajo bien hecho</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span style="color:rgb(15, 236, 63)" class="glyphicon glyphicon-leaf logo-small"></span>
+                <h4>Verde</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span style="color:rgb(223, 248, 0)" class="glyphicon glyphicon-certificate logo-small"></span>
+                <h4>CERTIFICADO</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span style="color:rgb(133, 141, 145)" class="glyphicon glyphicon-wrench logo-small"></span>
+                <h4 style="color:#303030;">TRABAJO DURO</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2>Portfolio</h2><br>
+        <h4>What we have created</h4>
+        <div class="row text-center slideanim">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="paris.jpg" alt="Paris" width="400" height="300">
+                    <p><strong>Rio Grande</strong></p>
+                    <p>Si, nosotros construimos Rio Grande!</p>
                 </div>
-               <!-- <p>
-                    <a href=" " class="w3-btn w3-theme-light " target="_blank "></a>
-                </p>
-            </footer>
-          -->
-            <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-            <script>
-                // Side navigation
-                function w3_open() {
-                    var x = document.getElementById("mySidebar ");
-                    x.style.width = "100% ";
-                    x.style.fontSize = "40px ";
-                    x.style.paddingTop = "10% ";
-                    x.style.display = "block ";
-                }
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="newyork.jpg" alt="New York" width="400" height="300">
+                    <p><strong>Paso de los Libres</strong></p>
+                    <p>Nosotros construimos Paso de los Libres</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+                    <p><strong>Ushuaia</strong></p>
+                    <p>Si, Ushuaia es NUESTRO</p>
+                </div>
+            </div>
+        </div><br>
 
-                function w3_close() {
-                    document.getElementById("mySidebar ").style.display = "none ";
-                }
+        <h2>Lo que dicen de nosotros.</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-                // Tabs
-                function openCity(evt, cityName) {
-                    var i;
-                    var x = document.getElementsByClassName("city ");
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none ";
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h4>"Esta compania es la mejor de todas!"<br><span>Gabriel Boveda, Presidente de TransAmerica (Se hace propaganda solo)</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"Viva Expreso Fueguino!!"<br><span>Nico Del Caño, Frente de izquierda.</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"HERMOSA LA PAGINA LOCO!!"<br><span>Ignacio Antuña, "Programador?"</span></h4>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div id="pricing" class="container-fluid text-center">
+        <h3>Ecomerce</h3><br>
+        <a href="http://mysql.ecargas.com.ar/?id=fu" target=" _blank">
+            <picture><img src="http://www.ecargas.com.ar/assets/img/ipad-hand.png" width="100px" height="100px" border-image=0></picture>
+        </a>
+        <a href="http://mysql.ecargas.com.ar/?id=fu" target=" _blank">
+            <p>Para verificar las cargas.</p>
+        </a>
+    </div>
+    </div>
+    <!-- Container (Pricing Section) 
+    <div id="pricing" class="container-fluid">
+        <div class="text-center">
+            <h2>Pricing</h2>
+            <h4>Choose a payment plan that works for you</h4>
+        </div>
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Basic</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>20</strong> Lorem</p>
+                        <p><strong>15</strong> Ipsum</p>
+                        <p><strong>5</strong> Dolor</p>
+                        <p><strong>2</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$19</h3>
+                        <h4>per month</h4>
+                        <button class="btn btn-lg">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Pro</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>50</strong> Lorem</p>
+                        <p><strong>25</strong> Ipsum</p>
+                        <p><strong>10</strong> Dolor</p>
+                        <p><strong>5</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$29</h3>
+                        <h4>per month</h4>
+                        <button class="btn btn-lg">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Premium</h1>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>100</strong> Lorem</p>
+                        <p><strong>50</strong> Ipsum</p>
+                        <p><strong>25</strong> Dolor</p>
+                        <p><strong>10</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>$49</h3>
+                        <h4>per month</h4>
+                        <button class="btn btn-lg">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">CONTACTO</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Envianos un mensaje y nos vamos a estar comunicando en menos de 24 horas hábiles.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Buenos Aires, Arg.</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +54 011 4513-2266</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> iantuna@cantarini.com.ar</p>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="Mapa.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+    <footer class="container-fluid text-center">
+        <div class="container">
+            <ul class="red_social">
+                <a href="https:www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </ul>
+        </div>
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
                     }
-                    var activebtn = document.getElementsByClassName("testbtn ");
-                    for (i = 0; i < x.length; i++) {
-                        activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey ", " ");
-                    }
-                    document.getElementById(cityName).style.display = "block ";
-                    evt.currentTarget.className += " w3-dark-grey ";
-                }
-
-                var mybtn = document.getElementsByClassName("testbtn ")[0];
-                mybtn.click();
-
-                // Accordions
-                function myAccFunc(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show ") == -1) {
-                        x.className += " w3-show ";
-                    } else {
-                        x.className = x.className.replace(" w3-show ", " ");
-                    }
-                }
-
-                // Slideshows
-                var slideIndex = 1;
-
-                function plusDivs(n) {
-                    slideIndex = slideIndex + n;
-                    showDivs(slideIndex);
-                }
-
-                function showDivs(n) {
-                    var x = document.getElementsByClassName("mySlides ");
-                    if (n > x.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = x.length
-                    };
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none ";
-                    }
-                    x[slideIndex - 1].style.display = "block ";
-                }
-
-                showDivs(1);
-
-                // Progress Bars
-                function move() {
-                    var elem = document.getElementById("myBar ");
-                    var width = 5;
-                    var id = setInterval(frame, 10);
-
-                    function frame() {
-                        if (width == 100) {
-                            clearInterval(id);
-                        } else {
-                            width++;
-                            elem.style.width = width + '%';
-                            elem.innerHTML = width * 1 + '%';
-                        }
-                    }
-                }
-            </script>
+                });
+            });
+        })
+    </script>
 
 </body>
 
