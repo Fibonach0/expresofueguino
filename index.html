@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Fibonacci/ikifaR -->
+
 <head>
     <!-- Tema sacado de www.w3schools.com -->
     <title>Expreso Fueguino</title>
@@ -317,17 +317,17 @@
             <div class="col-sm-4">
                 <span style="color:rgb(0, 0, 0)" class="glyphicon glyphicon-off logo-small"></span>
                 <h4>Fuerza</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
             <div class="col-sm-4">
                 <span style="color:rgb(228, 10, 10)" class="glyphicon glyphicon-heart logo-small"></span>
                 <h4>Empatía</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon glyphicon-lock logo-small"></span>
                 <h4>Trabajo bien hecho</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
         </div>
         <br><br>
@@ -335,17 +335,17 @@
             <div class="col-sm-4">
                 <span style="color:rgb(15, 236, 63)" class="glyphicon glyphicon-leaf logo-small"></span>
                 <h4>Verde</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
             <div class="col-sm-4">
                 <span style="color:rgb(223, 248, 0)" class="glyphicon glyphicon-certificate logo-small"></span>
                 <h4>CERTIFICADO</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
             <div class="col-sm-4">
                 <span style="color:rgb(133, 141, 145)" class="glyphicon glyphicon-wrench logo-small"></span>
                 <h4 style="color:#303030;">TRABAJO DURO</h4>
-                <p>Lorem ipsum dolor sit amet..</p>
+                <p>blah blah blah blah</p>
             </div>
         </div>
     </div>
@@ -353,7 +353,7 @@
     <!-- Container (Portfolio Section) -->
     <div id="portfolio" class="container-fluid text-center bg-grey">
         <h2>Portfolio</h2><br>
-        <h4>What we have created</h4>
+        <h4>Qué hemos creado.</h4>
         <div class="row text-center slideanim">
             <div class="col-sm-4">
                 <div class="thumbnail">
@@ -396,7 +396,7 @@
                     <h4>"Viva Expreso Fueguino!!"<br><span>Nico Del Caño, Frente de izquierda.</span></h4>
                 </div>
                 <div class="item">
-                    <h4>"HERMOSA LA PAGINA LOCO!!"<br><span>Ignacio Antuña, "Programador?"</span></h4>
+                    <h4>"HERMOSA LA PAGINA LOCO!!"<br><span>Ignacio Antuña, "Programador (to be)?"</span></h4>
                 </div>
             </div>
 
@@ -498,22 +498,25 @@
                 <p><span class="glyphicon glyphicon-phone"></span> +54 011 4513-2266</p>
                 <p><span class="glyphicon glyphicon-envelope"></span> iantuna@cantarini.com.ar</p>
             </div>
-            <div class="col-sm-7 slideanim">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+            <form method="post">
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
                     </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <input class="btn btn-default pull-right" type="button" value="Send Email" onclick="sendEmail()" required>
+                        </div>
                     </div>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Enviar</button>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -534,6 +537,24 @@
 
     </footer>
 
+    <!--Email sending-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "IGnacio.antu@gmail.com",
+                    Password: "Yeah!1561219497",
+                    To: 'rhefew@gmail.com',
+                    From: "IGnacio.antu@gmail.com",
+                    Subject: "SUBJECT",
+                    Body: "BODY",
+                })
+                .then(function(message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
     <script>
         $(document).ready(function() {
             // Add smooth scrolling to all links in navbar + footer link
