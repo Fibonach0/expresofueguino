@@ -613,14 +613,6 @@
                     </div>
                     <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <div class="col-sm-6 form-group">
-                                <input type="file">
-                            </div>
-                            <div class="btn btn-default pull-left" id="subida">
-                                <input class="col-sm-12 form-group" type="text" placeholder="Subir tu archivo">
-                            </div>
-                        </div>
                         <div class="col-sm-12 form-group">
                             <input class="btn btn-default pull-right" type="button" value="Enviar" onclick="sendEmail()" required>
                         </div>
@@ -642,37 +634,32 @@
     </footer>
 
     <!--Email sending -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
-        function sendEmail() {
+		function sendEmail() {
 
-            let name = valueById('name')
-            let email = valueById('email')
-            let text = valueById('comments')
-            let subida = valueById('subida')
+			let name = valueById('name')
+			let email= valueById('email')
+			let text = valueById('comments')
 
-            Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "email.cantarini@gmail.com",
-                    Password: "bqpzrowwhbervlah",
-                    To: 'email.cantarini@gmail.com',
-                    From: email,
-                    Subject: name,
-                    Body: text,
-                    Attachments: [{
-                        name: "Adjunto",
-                        path: subida,
-                    }]
-                })
-                .then(function(message) {
-                    alert("El mensaje se envió correctamente.")
-                });
-        }
+			Email.send({
+                Host: "smtp.gmail.com",
+                Username: "email.cantarini@gmail.com",
+                Password: "bqpzrowwhbervlah",
+                To: 'email.cantarini@gmail.com',
+				From : email,
+				Subject : name,
+				Body : text,
+			})
+			.then(function(message){
+				alert("El mensaje se envió correctamente.")
+			});
+		}
 
-        function valueById(element) {
-            return document.getElementById(element).value
-        }
-    </script>
+		function valueById(element){
+			return document.getElementById(element).value
+		}
+	</script>
 
     <!-- Trigger/Open The Modal -->
     <button id="myBtn">Mapa</button>
