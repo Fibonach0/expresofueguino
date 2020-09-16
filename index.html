@@ -613,6 +613,14 @@
                     </div>
                     <textarea class="form-control" id="comments" name="comments" placeholder="Commentario" rows="5"></textarea><br>
                     <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <div class="col-sm-6 form-group">
+                                <input type="file">
+                            </div>
+                            <div class="btn btn-default pull-left" id="subida">
+                                <input class="col-sm-12 form-group" type="text" placeholder="Subir tu archivo">
+                            </div>
+                        </div>
                         <div class="col-sm-12 form-group">
                             <input class="btn btn-default pull-right" type="button" value="Enviar" onclick="sendEmail()" required>
                         </div>
@@ -641,6 +649,7 @@
             let name = valueById('name')
             let email = valueById('email')
             let text = valueById('comments')
+            let subida = valueById('subida')
 
             Email.send({
                     Host: "smtp.gmail.com",
@@ -651,8 +660,8 @@
                     Subject: name,
                     Body: text,
                     Attachments: [{
-                        name: "logo-empresa.jpg",
-                        path: "http://www.expresofueguino.ga/logo_empresa%20TA.jpg"
+                        name: "Adjunto",
+                        path: subida,
                     }]
                 })
                 .then(function(message) {
