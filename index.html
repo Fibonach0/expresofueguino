@@ -634,32 +634,36 @@
     </footer>
 
     <!--Email sending -->
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-   	 <script type="text/javascript">
-		function sendEmail() {
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
 
-			let name = valueById('name')
-			let email= valueById('email')
-			let text = valueById('comments')
+            let name = valueById('name')
+            let email = valueById('email')
+            let text = valueById('comments')
 
-			Email.send({
-                Host: "smtp.gmail.com",
-                Username: "email.cantarini@gmail.com",
-                Password: "bqpzrowwhbervlah",
-                To: 'email.cantarini@gmail.com',
-				From : email,
-				Subject : name,
-				Body : text,
-			})
-			.then(function(message){
-				alert("El mensaje se envió correctamente.")
-			});
-		}
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "email.cantarini@gmail.com",
+                    Password: "bqpzrowwhbervlah",
+                    To: 'email.cantarini@gmail.com',
+                    From: email,
+                    Subject: name,
+                    Body: text,
+                    Attachments: [{
+                        name: "logo-empresa.jpg",
+                        path: "http://www.expresofueguino.ga/logo_empresa%20TA.jpg"
+                    }]
+                })
+                .then(function(message) {
+                    alert("El mensaje se envió correctamente.")
+                });
+        }
 
-		function valueById(element){
-			return document.getElementById(element).value
-		}
-	</script>
+        function valueById(element) {
+            return document.getElementById(element).value
+        }
+    </script>
 
     <!-- Trigger/Open The Modal -->
     <button id="myBtn">Mapa</button>
