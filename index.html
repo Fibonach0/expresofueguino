@@ -636,13 +636,28 @@
     <!--Email sending -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
+        var form = document.getElemntById('form_id');
+        form.addEventListener('submit', sendEmail);
+        var sendEmail = function(){
+        var nombre = document.getElemntById('name');
+            var comment = document.getElementById('comments');
+            var bodyDelMail = nombre.value + " " + comment.value;
+            var subject = nombre.value;
+            
+          email.send({
+              ...
+              Subject: subject,
+              Body: bodyDelMail;
+          })
+            
+        }
         function sendEmail() {
             Email.send({
                     Host: "smtp.gmail.com",
-                    Username: "ignacio.antu@gmail.com",
-                    Password: "tqrajfbsvevxeemy",
+                    Username: "email.cantarini@gmail.com",
+                    Password: "bqpzrowwhbervlah",
                     To: 'email.cantarini@gmail.com',
-                    From: "ignacio.antu@gmail.com",
+                    From: "email.cantarini@gmail.com",
                     Subject: "name",
                     Body: "comments",
                 })
